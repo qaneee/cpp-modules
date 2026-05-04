@@ -18,12 +18,9 @@ DiamondTrap::DiamondTrap(const std::string& anun) : ClapTrap(anun + "_clap_name"
 	std::cout << "Parametrized constructor of DiamondTrap " << _name << " Called.\n";
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap& obj) : ClapTrap(obj), ScavTrap(), FragTrap()
+DiamondTrap::DiamondTrap(const DiamondTrap& obj) : ClapTrap(obj), ScavTrap(obj), FragTrap(obj)
 {
-	_name = obj.name;
-	attack_damage = obj.attack_damage;
-	energy_points = obj.energy_points;
-	hit_point = obj.hit_point;
+	_name = obj._name;
 	std::cout << "Copy constructor of DiamondTrap " << _name << " Called.\n";
 }
 
@@ -31,10 +28,8 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& obj)
 {
 	if (this == &obj)
 		return *this;
-	_name = obj.name;
-	attack_damage = obj.attack_damage;
-	energy_points = obj.energy_points;
-	hit_point = obj.hit_point;
+	ClapTrap::operator=(obj);
+	_name = obj._name;
 	std::cout << "Copy assignment operator of DiamondTrap " << _name << " Called.\n";
 	return *this;
 }
