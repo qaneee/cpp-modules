@@ -1,16 +1,24 @@
 #include "Point.hpp"
 
-static Fixed cross_product(Point const &o, Point const &a, Point const &b)
+static Fixed triangle_area(Point const &o, Point const &a, Point const &b)
 {
-	return (a.getX() - o.getX()) * (b.getY() - o.getY()) - (a.getY() - o.getY()) * (b.getX() - o.getX());
+	Fixed result = (a.getX() - o.getX()) * (b.getY() - o.getY())
+						- (a.getY() - o.getY()) * (b.getX() - o.getX());
+
+	if (result < Fixed(0))
+		result = Fixed(0) - result;
+	return result;
 }
 
 bool bsp(Point const a, Point const b, Point const c, Point const point)
 {
-	Fixed d1 = cross_product(a, b, point);
-	Fixed d2 = cross_product(b, c, point);
-	Fixed d3 = cross_product(c, a, point);
-	Fixed zero(0);
+	Fixed total = triangle_area(a, b, c);
+	Fixed s1 = triangle_area(point, a, b);
+	Fixed s2 = triangle_area(point, b, c);
+	Fixed s3 = triangle_area(point, c, a);
 
-	return ((d1 > zero && d2 > zero && d3 > zero) || (d1 < zero && d2 < zero && d3 < zero));
+	if (s1 == Fixed(0) || s2 == Fixed(0) || s3 == Fixed(0))
+		return false;
+
+	return (s1 + s2 + s3) == total;
 }
