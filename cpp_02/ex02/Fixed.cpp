@@ -141,14 +141,14 @@ Fixed Fixed::operator-(const Fixed& obj) const
 Fixed Fixed::operator*(const Fixed& obj) const
 {
 	Fixed res;
-	res.setRawBits((long long)this->number * obj.number >> fract_bits);
+	res.setRawBits((long)this->number * obj.number >> fract_bits);
 	return res;
 }
 
 Fixed Fixed::operator/(const Fixed &obj) const
 {
 	Fixed res;
-	res.setRawBits(((long long)this->number << fract_bits) / obj.number);
+	res.setRawBits(((long)this->number << fract_bits) / obj.number);
 	return res;
 }
 
