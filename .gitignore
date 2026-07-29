@@ -1,0 +1,128 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Linker files
+*.ilk
+
+# Debugger Files
+*.pdb
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+*.so.*
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Build directories
+build/
+Build/
+build-*/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+install_manifest.txt
+compile_commands.json
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+*.swp
+
+# vcpkg
+vcpkg_installed/
+
+# debug information files
+*.dwo
+
+# test output & cache
+Testing/
+.cache/
+
+.vscode
+.env
+
+#CPP Module 00
+megaphone
+phonebook
+account
+
+#CPP Module 01
+zombie
+zombieHorde
+ptr_ref
+weapon
+loser
+harl
+harl_filter
+
+#CPP Module 02
+Fixed
+BSP
+
+#CPP Module 03
+ClapTrap
+ScavTrap
+FragTrap
+DiamondTrap
+
+#CPP Module 04
+Animal
+BrainDead
+AAnimal
+Materia
+
+#CPP Module 05 
+Bureaucrat
+Form
+AForm
+Intern
+*_shrubbery
+
+#CPP Module 06
+convert
+Serialization
+Base
+
+#CPP Module 07
+whatever
+iter
+Array
+
+#CPP Module 08
+MutantStack
+EasyFind
+Span
+
+#CPP Module 09
+btc
+RPN
+PmergeMe
