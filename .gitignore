@@ -2,8 +2,6 @@
 *.d
 
 # Compiled Object files
-*.slo
-*.lo
 *.o
 *.obj
 
@@ -16,16 +14,6 @@
 
 # Debugger Files
 *.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-# Fortran module files
-*.mod
-*.smod
 
 # Compiled Static libraries
 *.lai
@@ -56,9 +44,6 @@ compile_commands.json
 *.log
 *.bak
 *.swp
-
-# vcpkg
-vcpkg_installed/
 
 # debug information files
 *.dwo
