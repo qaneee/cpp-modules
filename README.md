@@ -48,13 +48,6 @@ cd CPP00
 make
 ```
 
-Or, if the top-level Makefile supports it, build everything at once:
-
-```bash
-make        # builds all modules
-make fclean # cleans all modules
-```
-
 ## Usage
 
 Each exercise produces its own binary inside its `exXX` directory. Run it directly after building.
